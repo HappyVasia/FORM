@@ -1,0 +1,19 @@
+body{
+	background-color:black;
+}
+.myform{
+	background-color:orange;
+	padding:5%;
+	margin:20%;
+	margin-top:5%;
+	margin-bottom:3%;
+	text-align:center;
+}
+input, select, textarea, label{
+	max-width:100%;
+}
+@media screen and (max-width:600px){
+	.myform{
+		margin:3px;
+	}
+}
