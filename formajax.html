@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+<meta charset="utf-8">
+<meta name=viewport content="width=600">
+<link rel = "stylesheet" href = "form.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$("document").ready(function(){
+		$(".button").click(function(){
+			var send = $("form").serializeArray();
+				$.ajax({
+					url:'formajax.php',
+					type:'post', 
+					data:send,
+						success: function(data){
+							alert(data);
+						},
+						error: function(){
+						alert("Что-то пошло не так");
+						}	
+					});
+		});
+	});
+</script>
+
+</head>
+<body>
+<div class="myform">
+<form method="post">
+<label>Введите Вашу фамилию<br><br>
+<input type="text" name="surname" class="surname"></label><br><br>
+<label>Введите Ваше имя<br><br>
+<input type="text" name="name" class="name"></label><br><br>
+<label>Выберите страну визита<br><br>
+<select name="country" class="country">
+	<option value="Амстердам"> Амстердам </option>
+	<option value="Берлин"> Берлин </option>
+	<option value="Будапешт"> Будапешт </option>
+	<option value="Каир"> Каир </option>
+	<option value="Монако"> Монако </option>
+	<option value="Париж"> Париж </option>
+	<option value="Стамбул"> Стамбул </option>
+	<option value="Хельсинки"> Хельсинки </option><select></label><br><br>
+<label>Выберите желаемый вид транспорта<br><br>
+<input type="radio" name="transport" class="transport" value="самолёт">Самолёт<br>
+<input type="radio" name="transport" class="transport"value="поезд">Поезд</label><br><br>
+<label>Куда Вы хотели бы получить номер Вашего заказа<br><br>
+<input type="checkbox" name="send[]" class="send" value="смс">Смс<br>
+<input type="checkbox" name="send[]" class="send"value="почта">Почта</label><br><br>
+<label>Напишите нам о Ваших дополнительных пожеланиях<br><br>
+<textarea name="comment" class="comment" rows="2" cols="30"></textarea><br><br>
+<input type="submit" name="submit" class="button" value="Отправить">
+</form>
+</div>
+</body>
+</html>
+
+
