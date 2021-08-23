@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+<meta charset="utf-8">
+<meta name=viewport content="width=600">
+<link rel = "stylesheet" href = "form.css">
+</head>
+
+<body>
+<div class="myform">
+<form method="post" action="form.php">
+<label>Введите фамилию<br><br>
+<input type="text" name="surname"></label><br><br>
+<label>Введите имя<br><br>
+<input type="text" name="name"></label><br><br>
+<label>Выберите возраст<br><br>
+<select name="age">
+	<option value="20"> 20 </option>
+	<option value="25"> 25 </option>
+	<option value="30"> 30 </option>
+	<option value="35"> 35 </option>
+	<option value="40"> 40 </option>
+	<option value="45"> 45 </option>
+	<option value="50"> 50 </option><select></label><br><br>
+<label>Выберите страну<br><br>
+<input type="radio" name="country" value="Россия">Россия<br>
+<input type="radio" name="country" value="другая">другая</label><br><br>
+<label>Куда отправлять уведомления<br><br>
+<input type="checkbox" name="send[]" value="смс">смс<br>
+<input type="checkbox" name="send[]" value="почта">почта</label><br><br>
+<label>Добавить комментарий<br><br>
+<textarea name="comment" rows="2" cols="30"></textarea><br><br>
+<input type="submit" name="submit" value="Отправить">
+</form>
+</div>
+
+</body>
+</html>
+
+
