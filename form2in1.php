@@ -13,7 +13,6 @@ body{
 </head>
 <body>
 
-
 <?php
 error_reporting(0);
 if(isset($_POST["surname"]))
@@ -30,7 +29,6 @@ if(isset($_POST["surname"]))
 		"<br> Вид транспорта: ".$_POST["transport"].
 		"<br> Способ получения заказа: ".$_POST["send"][0].
 									" ".$_POST["send"][1];
-																	
 }
 else {
 	?>
@@ -66,7 +64,6 @@ else {
 
 <?php
 }
-
 ?>
 
 </body>
@@ -80,13 +77,11 @@ $mytext = "\n\n Фамилия: ". $_POST["surname"].
 		"\n Страна визита: ".$_POST["country"].
 		"\n Вид транспорта: ".$_POST["transport"].
 		"\n Способ получения заказа: ".$_POST["send"][0].
-									" ".$_POST["send"][1].
+					    " ".$_POST["send"][1].
 		"\n Соощение: ".$_POST["comment"];		
 
 $add = fwrite($myfile2, $mytext);
 //ftruncate($myfile2, 0);
 fclose($myfile2);
-
-
 ?>
 
